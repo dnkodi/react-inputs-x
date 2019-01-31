@@ -1,0 +1,118 @@
+.inputItem {
+    display: block;
+    height: 87px;
+    width: 100%;
+
+    &.inline {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    label {
+        color: #201F21;
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        height: 19px;
+        margin-bottom: 5px;
+
+        &::selection {
+            background: #CBEFEA;
+        }
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input {
+        background-color: #FCFBFB;
+        border: solid 1px #D9D8D8;
+        border-radius: 3px;
+        box-shadow: inset 2px 3px 4px 0 rgba(0, 0, 0, 0.09);
+        box-sizing: border-box;
+        caret-color: #4D4D4D;
+        color: #4D4D4D;
+        font-size: 15px;
+        line-height: 20px;
+        padding: 10px 16.4px;
+        width: 100%;
+
+        // If the background *isn’t* white.
+        &.whiteBackground {
+            background-color: #FFFFFF;
+        }
+
+        &.invalidRequired {
+            border: solid 1px #E1C3C7;
+        }
+
+        &:focus {
+            border: solid 1px #BEBEBE;
+            outline: none;
+        }
+
+        &::selection {
+            background: #CBEFEA
+        }
+
+        &::placeholder {
+            opacity: 1;
+        }
+
+        &:disabled {
+            color: #9B9B9B;
+        }
+    }
+
+    .passwordText {
+        position: relative;
+
+        .toggle {
+            color: #657879;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            position: absolute;
+            right: 12px;
+            text-decoration: underline;
+            top: 4px;
+        }
+    }
+
+    .errorText {
+        color: #D0021B;
+        font-size: 12px;
+        font-weight: 500;
+        margin-top: 7px;
+    }
+
+    &.buttons {
+        button {
+            box-shadow: none;
+            height: 30px;
+            margin: 0;
+            min-width: 30px;
+            font-size: 10px;
+
+            &:nth-child(1) {
+                border-radius: 5px 0 0 5px;
+            }
+
+            &:nth-child(3) {
+                border-radius: 0 5px 5px 0;
+            }
+        }
+
+        input {
+            border-left: none;
+            border-radius: 0;
+            border-right: none;
+            height: 30px;
+            text-align: center;
+            width: calc(100% - 62px);
+        }
+    }
+}
